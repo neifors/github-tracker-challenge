@@ -1,6 +1,7 @@
 import React from "react";
 import { GiConqueror, GiMugShot, GiPlayerNext, GiPlayerPrevious } from "react-icons/gi";
 import { RiGitRepositoryFill } from "react-icons/ri"
+import "./index.css"
 
 /* Assuming the data it's going to receive will be:
       user = {
@@ -42,13 +43,14 @@ import { RiGitRepositoryFill } from "react-icons/ri"
 export const DetailsCard = ({user}) => {
 
    return(
-      <div className="card-wrapper">
-         <div className="card">
-            <h3><GiConqueror />{user.name}'s GitHub Stats</h3>
-            <p><GiMugShot/>{user.bio}</p>
-            <p><RiGitRepositoryFill/>Total repos: <span>{user.public_repos}</span></p>
-            <p><GiPlayerPrevious/>Followers: <span>{user.followers}</span></p>
-            <p><GiPlayerNext/>Following: <span>{user.following}</span></p>
+      <div id="card-wrapper">
+         <img src={user.avatar_url}/>
+         <div id="card">
+            <h3><GiConqueror /> {user.name}'s GitHub Stats</h3>
+            <p><GiMugShot/> {user.bio}</p>
+            <p><RiGitRepositoryFill/> Total repos: <span>{user.public_repos}</span></p>
+            <p><GiPlayerPrevious/> Followers: <span>{user.followers}</span></p>
+            <p><GiPlayerNext/> Following: <span>{user.following}</span></p>
             <a href={user.html_url}><button>GitHub</button></a>
          </div>
       </div>

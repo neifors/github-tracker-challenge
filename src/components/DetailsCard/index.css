@@ -1,0 +1,27 @@
+div#card-wrapper {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   margin: 50px;
+   border: 1px solid #adbac7;
+   border-radius: 30px;
+}
+
+div#card-wrapper img {
+   margin-left: 50px;
+   width: 200px;
+   height: 200px;
+}
+
+div#card-wrapper div#card {
+   margin:50px;
+}
+
+div#card-wrapper div#card button{
+   background-color: #adbac7;
+   color: #22272e;
+   cursor: pointer;
+   padding: 5px;
+   font-size: 1.1em;
+}
+

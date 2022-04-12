@@ -43,12 +43,12 @@ export const DetailsCard = ({user}) => {
    return(
       <div className="card-wrapper">
          <div className="card">
-            <IoAccessibilityOutline /> <h3>{user.name}'s GitHub Stats</h3>
-            <IoEllipsisVerticalOutline /> <p>{user.bio}</p>
-            <IoDocumentTextOutline /> <p>Total repos: <span>{user.public_repos}</span></p>
-            <IoArrowForwardCircleOutline /> <p>Followers: <span>{user.followers}</span></p>
-            <IoArrowBackCircleOutline /> <p>Following: <span>{user.following}</span></p>
-            <a href={user.html_url}><button><IoUnlink /> GitHub</button></a>
+            <h3>{user.name}'s GitHub Stats</h3>
+            <p>{user.bio}</p>
+            <p>Total repos: <span>{user.public_repos}</span></p>
+            <p>Followers: <span>{user.followers}</span></p>
+            <p>Following: <span>{user.following}</span></p>
+            <a href={user.html_url}><button>GitHub</button></a>
          </div>
       </div>
    );

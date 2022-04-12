@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Header, DetailsCard } from "./components/";
+import { Header, DetailsCard, RepoList} from "./components/";
 
 import "./normalize.css";
 import "./index.css";
@@ -21,7 +21,7 @@ export default function App() {
     <>
       <Header sendRequest={sendRequest} />
       {user && <DetailsCard user={user} />}
-      {data && <p>Hello {data[0].name}</p>}
+      {data && <RepoList repos={data} />}
     </>
   );
 }

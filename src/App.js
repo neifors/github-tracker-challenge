@@ -8,25 +8,18 @@ export default function App() {
   const [data, setData] = useState();
   const [user, setUser] = useState();
 
-  const sendRepoRequest = async (account) => {
-    let resp = await fetch(`https://api.github.com/users/${account}/repos`);
-    let gitData = await resp.json();
-    setData(gitData);
-    console.log(data);
-  };
-  const sendUserRequest = async (account) => {
-    let resp = await fetch(`https://api.github.com/users/${account}`);
-    let gitData = await resp.json();
+  const sendRequest = async (account) => {
+    let repoResp = await fetch(`https://api.github.com/users/${account}/repos`);
+    let repoData = await repoResp.json();
+    let userResp = await fetch(`https://api.github.com/users/${account}`);
+    let gitData = await userResp.json();
     setUser(gitData);
-    console.log(user);
+    setData(repoData);
   };
 
   return (
     <>
-      <Header
-        sendUserRequest={sendUserRequest}
-        sendRepoRequest={sendRepoRequest}
-      />
+      <Header sendRequest={sendRequest} />
       {user && <p>Hello {user.name}</p>}
       {data && <p>Hello {data[0].name}</p>}
     </>

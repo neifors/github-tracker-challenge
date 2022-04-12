@@ -3,7 +3,7 @@ import { Icon } from "../Icon";
 
 import "./index.css";
 
-export function Header({ sendUserRequest, sendRepoRequest }) {
+export function Header({ sendRequest }) {
   const [account, setAccount] = useState("");
 
   const handleAccountChange = (e) => {
@@ -11,8 +11,7 @@ export function Header({ sendUserRequest, sendRepoRequest }) {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    sendRepoRequest(account);
-    sendUserRequest(account);
+    sendRequest(account);
     setAccount("");
   };
   return (

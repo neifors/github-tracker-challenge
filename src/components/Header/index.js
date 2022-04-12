@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { Icon } from "../Icon";
 
 import "./index.css";
 
-export function Header() {
+export function Header({ sendRequest }) {
+  const [account, setAccount] = useState("");
+
+  const handleAccountChange = (e) => {
+    setAccount(e.target.value);
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    sendRequest(account);
+    setAccount("");
+  };
   return (
     <header className="header">
       <div className="tracker">
@@ -12,7 +22,15 @@ export function Header() {
       </div>
 
       <div className="search">
-        <input type="text" placeholder="Search for a Github Account" />
+        <form onSubmit={handleSubmit}>
+          <input
+            className="searchBar"
+            type="text"
+            onChange={handleAccountChange}
+            value={account}
+            placeholder="Search for an Account"
+          />
+        </form>
       </div>
     </header>
   );

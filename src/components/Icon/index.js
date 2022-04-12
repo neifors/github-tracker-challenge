@@ -4,12 +4,12 @@ export function Icon() {
   return (
     <svg
       className="icon"
-      height="32"
+      height="37"
       fill="#adbac7"
       aria-hidden="true"
       viewBox="0 0 16 16"
       version="1.1"
-      width="32"
+      width="37"
       data-view-component="true"
     >
       <path

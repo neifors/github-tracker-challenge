@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Header } from "./components/";
+import { Header, DetailsCard } from "./components/";
 
 import "./normalize.css";
 import "./index.css";
@@ -20,7 +20,7 @@ export default function App() {
   return (
     <>
       <Header sendRequest={sendRequest} />
-      {user && <p>Hello {user.name}</p>}
+      {user && <DetailsCard user={user} />}
       {data && <p>Hello {data[0].name}</p>}
     </>
   );

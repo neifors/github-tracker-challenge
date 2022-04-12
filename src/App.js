@@ -13,6 +13,7 @@ export default function App() {
     setData(gitData);
     console.log(data);
   };
+  
   return (
     <>
       <Header sendRequest={sendRequest} />

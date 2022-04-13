@@ -13,7 +13,7 @@ export const DetailsCard = ({user}) => {
                <div id="card">
                   <h3><GiConqueror /> {user.name}'s GitHub Stats</h3>
                   <p><GiMugShot/> {user.bio}</p>
-                  <p><RiGitRepositoryFill/> Total repos: <span>{user.public_repos}</span></p>
+                  <p><RiGitRepositoryFill/> Total public repos: <span>{user.public_repos}</span></p>
                   <p><GiPlayerPrevious/> Followers: <span>{user.followers}</span></p>
                   <p><GiPlayerNext/> Following: <span>{user.following}</span></p>
                   <a href={user.html_url}><button>GitHub</button></a>

@@ -1,0 +1,36 @@
+div#repos-wrapper {
+   margin: 40px;
+}
+
+div#repos-wrapper div.card {
+   display: flex;
+   flex-direction: column;
+   padding: 40px;
+   margin: 10px;
+   border: 1px solid #adbac7;
+   border-radius: 30px;
+}
+
+div#repos-wrapper div.card h2.title {
+   align-self: center;
+   margin: 0;
+   font-size: 30px;
+}
+
+div#repos-wrapper div.card p{
+   margin-top: 8px;
+}
+
+div#repos-wrapper h1#repos-main-title {
+   margin-top: 0;
+   padding-top: 0;
+   margin-left: 20px;
+}
+
+div#repos-wrapper div.card button.see-repo-bttn {
+   background-color: #adbac7;
+   color: #22272e;
+   cursor: pointer;
+   padding: 5px;
+   font-size: 1.1em;
+}

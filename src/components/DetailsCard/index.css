@@ -25,3 +25,11 @@ div#card-wrapper div#card button{
    font-size: 1.1em;
 }
 
+div#not-found-wrapper {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   margin: 50px;
+   border: 1px solid #adbac7;
+   border-radius: 30px;
+}

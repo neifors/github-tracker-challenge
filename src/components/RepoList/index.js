@@ -1,5 +1,6 @@
 import React from "react";
 import './index.css'
+import { get_all_commits_count } from "../commitsCounter";
 
 export const RepoList = ({repos}) => {
 
@@ -10,13 +11,18 @@ export const RepoList = ({repos}) => {
          return (
             repos.map( repo => {
                counter++;
+               // const owner = repo.owner.login
+               const rep = repo.name
+               // const sha = repo.default_branch 
+               // const commits = get_all_commits_count(owner,rep,sha)
                const date = repo.created_at.split('T')[0]
                return(
                   <div className="card" key={counter}>
-                     <h2 className="title">{repo.name}</h2>
+                     <h2 className="title">{rep}</h2>
                      <p className="language">Language: {repo.language}</p>
                      <p className="date">Created at: {date}</p>
                      <p className="forks">Forks: {repo.forks}</p>
+                     {/* <p className="total-commits">Commits: {commits}</p> */}
                      <a href={repo.html_url}><button className="see-repo-bttn">See repo</button></a>
                   </div>)
             } ) )

@@ -5,6 +5,7 @@
 ## App description
 
 A repo tracker where you can get an overview of your work without visiting the site itself.
+Try [here.](https://fp-github-tracker.netlify.app/)
 
 ## Installation & Usage
 
@@ -34,6 +35,7 @@ A repo tracker where you can get an overview of your work without visiting the s
 - Successfully managed to produce a site which met all of the basic requirements.
 - Get all the functionalities done in couple of hours.
 - Design aesthetic on a minimalist version of a GitHub repositories page.
+- Deployed at Netlify
 
 ### Challenges
 
